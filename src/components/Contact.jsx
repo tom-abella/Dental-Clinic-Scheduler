@@ -33,7 +33,7 @@ const onSubmitMovie = async()=>{
     window.location.reload();
     
     }catch(err){
-        alert(" ❌ Bokking Failed!")
+        alert(" ❌ Booking Failed!")
         window.location.reload();
         console.error(err)
 }

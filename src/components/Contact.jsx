@@ -50,7 +50,7 @@ const onSubmitMovie = async()=>{
 
         <div className="h-full min-h-screen flex justify-center items-center pb-10 lg:pb-0" id="contact">
             <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-evenly w-full gap-10 lg:gap-20">
-                <div className="flex w-82 md:w-128 border-2 border-darkBlue p-10 rounded-xl order-2 lg:order-1 bg-blue-300">
+                <div className="flex w-80 md:w-128 border-2 border-darkBlue p-10 rounded-xl order-2 lg:order-1 bg-blue-300">
                     
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full" id="form">
                         <p className="uppercase text-center font-semibold">Booking Form</p>

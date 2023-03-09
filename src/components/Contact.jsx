@@ -5,7 +5,7 @@ import { useState, React,useEffect } from 'react';
 
 //firebase connection
 import {collection, addDoc} from 'firebase/firestore'
-import {db} from "../config/firebase"
+import {db} from "../config/Firebase"
 
 export default function Contact(){
 

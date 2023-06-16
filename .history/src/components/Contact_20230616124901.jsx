@@ -30,10 +30,13 @@ const onSubmitMovie = async()=>{
         date: newDate
     })
     alert(" ✅ Booking Successful!")
-    window.location.reload();
+    setNewName("")
+    setNewEmail("")
+    setNewContact("")
+    setNewEma("")
     
     }catch(err){
-        alert(" ❌ Bokking Failed!")
+        alert(" ❌ Booking Failed!")
         window.location.reload();
         console.error(err)
 }
@@ -41,7 +44,7 @@ const onSubmitMovie = async()=>{
     const handleSubmit = (event) =>{
         event.preventDefault()
         onSubmitMovie()
-        setNewName("")
+        
         
     }
     return(
@@ -50,18 +53,19 @@ const onSubmitMovie = async()=>{
 
         <div className="h-full min-h-screen flex justify-center items-center pb-10 lg:pb-0" id="contact">
             <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-evenly w-full gap-10 lg:gap-20">
-                <div className="flex w-82 md:w-128 border-2 border-darkBlue p-10 rounded-xl order-2 lg:order-1 bg-blue-300">
+                <div className="flex w-80 md:w-128 border-2 border-darkBlue p-10 rounded-xl order-2 lg:order-1 bg-blue-300">
                     
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full" id="form">
                         <p className="uppercase text-center font-semibold">Booking Form</p>
                         <label htmlFor="name">Name: </label>
-                        <input type="text" id="name" className="rounded-lg p-1 px-2" placeholder='Enter your Name ...' onChange={(e)=>setNewName(e.target.value)}/>
+                        <input type="text" id="name" className="rounded-lg p-1 px-2" value={newName} placeholder='Enter your Name ...' onChange={(e)=>setNewName(e.target.value)}/>
                         <label htmlFor="email">Email: </label>
                         <input 
                             type="email" 
                             id="email" 
                             className="rounded-lg p-1 px-2" 
                             placeholder='Enter your Email ...' 
+                            value={newEmail}
                             onChange={(e)=> setNewEmail(e.target.value)}/>
                         <label htmlFor="contact" >Contact Number: </label>
                         <PhoneInput
@@ -72,11 +76,13 @@ const onSubmitMovie = async()=>{
                         <label htmlFor="date">Date: </label>
                         <input type="date" 
                             id="date" 
+                            value={newDate}
                             onChange={(e)=>setNewDate(e.target.value)}
                             className="rounded-lg p-1 px-2"/>
                         <label htmlFor="time">Time: </label>
                         <input type="time" 
                             id="time" 
+                            value={newTime}
                             onChange={(e)=>setNewTime(e.target.value)}
                             className="rounded-lg p-1 px-2"/>
 

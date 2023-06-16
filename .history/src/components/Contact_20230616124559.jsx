@@ -30,11 +30,6 @@ const onSubmitMovie = async()=>{
         date: newDate
     })
     alert(" ✅ Booking Successful!")
-    setNewName("")
-    setNewEmail("")
-    setNewContact("")
-    setNewDate("")
-    setNewTime("")
     
     }catch(err){
         alert(" ❌ Booking Failed!")
@@ -45,7 +40,7 @@ const onSubmitMovie = async()=>{
     const handleSubmit = (event) =>{
         event.preventDefault()
         onSubmitMovie()
-        
+        setNewName("")
         
     }
     return(
@@ -59,14 +54,13 @@ const onSubmitMovie = async()=>{
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full" id="form">
                         <p className="uppercase text-center font-semibold">Booking Form</p>
                         <label htmlFor="name">Name: </label>
-                        <input type="text" id="name" className="rounded-lg p-1 px-2" value={newName} placeholder='Enter your Name ...' onChange={(e)=>setNewName(e.target.value)}/>
+                        <input type="text" id="name" className="rounded-lg p-1 px-2" placeholder='Enter your Name ...' onChange={(e)=>setNewName(e.target.value)}/>
                         <label htmlFor="email">Email: </label>
                         <input 
                             type="email" 
                             id="email" 
                             className="rounded-lg p-1 px-2" 
                             placeholder='Enter your Email ...' 
-                            value={newEmail}
                             onChange={(e)=> setNewEmail(e.target.value)}/>
                         <label htmlFor="contact" >Contact Number: </label>
                         <PhoneInput
@@ -77,13 +71,11 @@ const onSubmitMovie = async()=>{
                         <label htmlFor="date">Date: </label>
                         <input type="date" 
                             id="date" 
-                            value={newDate}
                             onChange={(e)=>setNewDate(e.target.value)}
                             className="rounded-lg p-1 px-2"/>
                         <label htmlFor="time">Time: </label>
                         <input type="time" 
                             id="time" 
-                            value={newTime}
                             onChange={(e)=>setNewTime(e.target.value)}
                             className="rounded-lg p-1 px-2"/>
 

@@ -33,8 +33,7 @@ const onSubmitMovie = async()=>{
     setNewName("")
     setNewEmail("")
     setNewContact("")
-    setNewDate("")
-    setNewTime("")
+    setNewEmail("")
     
     }catch(err){
         alert(" ❌ Booking Failed!")
